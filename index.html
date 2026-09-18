@@ -2,10 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Exam Retake - WEB1</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="bg-gray-50 p-6 font-sans">
+<main class="max-w-6xl mx-auto">
+    <section id="filter-bar" class="flex justify-center gap-3 flex-wrap mb-8 bg-amber-200 items-center p-1">
+        <div id="filter-languages" class="flex flex-col gap-2 justify-center items-center">
+            <h1>LANGUAGE</h1>
+            <div id="buttons" class="flex flex-row gap-1 justify-center">
+                <button class="border border-gray-300 p-2 rounded text-sm bg-white"><i>EN</i></button>
+                <button class="border border-gray-300 p-2 rounded text-sm bg-white"><i>FR</i></button>
+                <button class="border border-gray-300 p-2 rounded text-sm bg-white"><i>MLG</i></button>
+            </div>
+        </div>
+        <div id="technologies" class="flex flex-col gap-2 justify-center items-center">
+            <label for="filter-tech">TECHNOLOGY</label>
+            <select id="filter-tech" class="border border-gray-300 p-2 rounded text-sm bg-white">
+                <option value="">Technologies</option>
+                <option value="javascript">Javascript</option>
+                <option value="java">Java</option>
+                <option value="database">Database</option>
+                <option value="git">Git</option>
+            </select>
+        </div>
+        <div id="levels" class="flex flex-col gap-2 justify-center items-center">
+            <label for="filter-level">LEVEL</label>
+            <select id="filter-level" class="border border-gray-300 p-2 rounded text-sm bg-white">
+                <option value="">Level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+            </select>
+        </div>
+        <div class="flex flex-col">
+            <label>PRICE RANGE</label>
+            <input type="range" id="filter-price-min" min="0" max="300000" step="10000" value="0" class="border border-gray-300 p-2 rounded bg-white accent-red-600">
+            <input type="range" id="filter-price-max" min="0" max="300000" step="10000" value="300000" class="border border-gray-300 p-2 rounded bg-white accent-red-600">
+            
+        </div>
+        <div id="search" class="flex">
+            <label for="search-keyword">SEARCH</label>
+            <input type="text" id="search-keyword" placeholder="Keywords..." class="border border-gray-300 p-2 rounded text-sm bg-white">
+        </div>
+
+        
+        <button id="clear-filters" class="border text-gray-400 bg-white px-3 py-2 rounded text-sm hover:bg-red-50">CLEAR ALL</button>
+    </section>
+
+    <section id="course-cards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+
+    </section>
+</main>
 </body>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="index.js"></script>
